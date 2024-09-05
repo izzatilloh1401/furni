@@ -102,8 +102,8 @@ app.use("/", require("./routes/Home"));
 
 
 
-// app.use(async (req, res) => {
-//     const menu = await Menu.find();
-//     res.status(404).render("notfound", { title: "Sahifa topilmadi", menu });
-// });
+app.use(async (req, res) => {
+    const menu = await Menu.find();
+    res.status(404).render("notfound", { title: "Sahifa topilmadi", menu });
+});
 
